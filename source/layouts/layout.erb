@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+  <head>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta charset="utf-8">
+    <meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+
+    <!-- Use title if it's in the page YAML frontmatter -->
+    <title><%= current_page.data.title || "Grant Ammons" %></title>
+
+    <link href="https://fonts.googleapis.com/css?family=Merriweather:300,400,400i,700|Open+Sans:300,400,700" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
+
+    <%= stylesheet_link_tag :site %>
+    <%= javascript_include_tag :all %>
+    <%= partial :favicon %>
+  </head>
+
+  <body class="<%= page_classes %>">
+    <%= partial "nav" %>
+
+    <div class="logo">
+      <img src="images/me.png" />
+    </div>
+
+    <div class="page">
+      <section class="firstSection">
+        <% if current_page.data.show_name %>
+          <h1>Grant Ammons</h1>
+        <% end %>
+
+        <h2><%= current_page.data.header %></h2>
+      </section>
+      <%= yield %>
+      <div class="footer">
+        &copy; <%= Time.now.year %> Grant Ammons
+      </div>
+    </div>
+
+    <%= google_analytics_universal_tag %>
+  </body>
+  <script type='text/javascript' src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script type='text/javascript' src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</html>

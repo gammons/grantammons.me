@@ -1,0 +1,34 @@
+article.post {
+  border-bottom: #EBF2F6 1px solid;
+  margin: 4rem auto;
+  padding-bottom: 4rem;
+}
+
+article .author-thumb {
+  border-radius: 100%;
+}
+
+article footer {
+  font-size: 14px;
+  color: #ccc;
+}
+
+article footer a {
+  color: #aaa;
+}
+
+article time {
+  margin-left: 5px;
+  padding-left: 10px;
+  border-left: #EBF2F6 1px solid;
+}
+
+article.blog-post img {
+  left: 50%;
+  display: block;
+  max-width: 100%;
+  position: relative;
+  height: auto;
+  transform: translateX(-50%);
+  padding: 0.6em 0;
+}
