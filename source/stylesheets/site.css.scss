@@ -1,7 +1,13 @@
 @charset "utf-8";
+
+$dark-color: #444F5A;
+$highlight-color: #EA5455;
+
+
 @import "normalize";
 @import "nav";
 @import "blog";
+
 
 body {
   color: rgb(58, 65, 69);
@@ -10,15 +16,13 @@ body {
   font-weight: 300;
   font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
   line-height: 1.75em;
-  //background-image: url("/images/crissxcross.png"), linear-gradient(to bottom, #145374 0%,#00334E 63%);
-  background-image: url("/images/crissxcross.png");
-  background-color: #00334E;
-  //background: url("/images/")linear-gradient(to bottom, #00334E 0%,#5588A3 63%)
+  background-image: url("/images/smooth-wall-dark.png");
+  background-color: $dark-color;
 
 }
 
 em {
-  color: #EA5455;
+  color: $highlight-color;
   font-weight: bold;
   font-style: italic;
 }
@@ -54,7 +58,7 @@ em {
 }
 
 .page a {
-  color: #EA5455;
+  color: $highlight-color;
   text-decoration: underline;
 }
 
@@ -72,7 +76,7 @@ em {
 
 .firstSection {
   text-align: center;
-  margin-top: 30px;
+  margin-top: 10px;
   margin-bottom: 30px;
 }
 
