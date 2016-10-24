@@ -4,12 +4,19 @@ page: about
 show_name: true
 ---
 
-%p I'm an <em>engineer</em> and <em>technical leader</em> with 15 years of experience, and I love to create <em>awesome products.</em>
+%p.callout I'm an <em>engineer</em> and <em>technical leader</em> with 15 years of experience, and I love to create <em>awesome products.</em>
 %p
   Check out my
   %a blog
   or my
-  %a portfolio
+  %a portfolio.
 
+%h2 Latest updates
 
-
+.latest-updates
+  %ul
+    - page_articles[0..10].each do |article|
+      %li
+        %strong= link_to article.title, article
+        %img{src: "/images/#{article.data.cover}"}
+        %p= summary(article)
