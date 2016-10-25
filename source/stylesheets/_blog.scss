@@ -23,6 +23,16 @@ article time {
   border-left: #EBF2F6 1px solid;
 }
 
+article em {
+  font-weight: 300;
+  color: $text-color;
+}
+
+article blockquote p {
+  font-size: 28px;
+  font-style: italic;
+}
+
 article.blog-post img {
   left: 50%;
   display: block;
