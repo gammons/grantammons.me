@@ -11,6 +11,7 @@
     <link href="https://fonts.googleapis.com/css?family=Arimo:400,700|Roboto:300,300i,500,500i,700,700i" rel="stylesheet">
 
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Patua+One" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
 
     <%= stylesheet_link_tag :site %>
@@ -31,7 +32,9 @@
           <h1>Grant Ammons</h1>
         <% end %>
 
-        <h2><%= current_page.data.header %></h2>
+        <% if current_page.data.header %>
+          <h2><%= current_page.data.header %></h2>
+        <% end %>
       </section>
       <%= yield %>
       <div class="footer">

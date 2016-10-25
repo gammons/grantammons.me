@@ -4,19 +4,16 @@ page: about
 show_name: true
 ---
 
-%p.callout I'm an <em>engineer</em> and <em>technical leader</em> with 15 years of experience, and I love to create <em>awesome products.</em>
-%p
-  Check out my
-  %a blog
-  or my
-  %a portfolio.
+%p.callout
+  I'm an <em>engineer</em> and <em>technical leader</em> with 15 years of experience, and I love to create <em>awesome web apps.</em> Read more
+  %a about me
+  and
+  %a check out my blog!
 
-%h2 Latest updates
 
 .latest-updates
+  %h2 Latest updates
   %ul
     - page_articles[0..10].each do |article|
-      %li
-        %strong= link_to article.title, article
-        %img{src: "/images/#{article.data.cover}"}
-        %p= summary(article)
+      %li(style="background-image: url(/images/black-thread-light.png)")
+        %h3= link_to article.title, article
