@@ -10,18 +10,19 @@
         %h2
           Want to become a better developer?
           %span.glyphicon.glyphicon-remove
+
   .body.hidden
     %p Did you like this post?
     %p Sign up to receive <em>short, focused, occasional</em> emails about how to level yourself up as a developer.
 
     %p You'll also be the first to know about some awesome courses I have coming up!
 
-    %form
+    %form(action="//grantammons.us6.list-manage.com/subscribe/post?u=2c85635c3b0fa63233638e6c7&amp;id=43be60dfc6" method="post" class="validate" target="_blank")
+      <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_2c85635c3b0fa63233638e6c7_43be60dfc6" tabindex="-1" value=""></div>
       .form-group.form-group-lg
-        %input(type="email" class="form-control email-address" placeholder="your@email.com")
+        %input(type="email" name="EMAIL" class="form-control email-address" placeholder="your@email.com" required)
       %button(type="submit" class="btn btn-primary btn-block btn-lg") I want to level up!
     %p Join hundreds of other developers looking to up their game!
-
 
 :javascript
   var modalClosed = false;
