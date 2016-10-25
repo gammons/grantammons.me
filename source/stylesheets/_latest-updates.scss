@@ -9,6 +9,7 @@
   background-image: url(/images/black-thread-light.png);
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 .latest-updates h2 {
@@ -17,6 +18,7 @@
 
 .latest-updates h3 {
   margin: 0;
+  text-align: center;
 }
 
 .latest-updates img {
