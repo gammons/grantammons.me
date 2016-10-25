@@ -1,7 +1,7 @@
 ---
 title: Where the logic hides in Rails apps
 date: 2012-12-22 11:05 UTC
-tags: architecture
+tags: cleancode, rails, seniordevchops
 cover: computer.jpg
 page: blog
 ---

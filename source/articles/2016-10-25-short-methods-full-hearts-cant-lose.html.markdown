@@ -1,5 +1,5 @@
 ---
-title: Short methods, full hearts, cant lose
+title: Short methods, full hearts, can't lose
 date: 2016-10-25 11:09 UTC
 tags: cleancode, seniordevchops
 ---
@@ -8,7 +8,7 @@ tags: cleancode, seniordevchops
 
 If there's one rule that really makes all the difference in terms of code readability, it's *keeping your method sizes small*.  Your present and future teammates will thank you for it.
 
-What do I mean by *small*?  Well, according to [Sandi Metz][metz] and [Uncle Bob][bob], methods should generally be [**5 lines or less**][fivelines].  You read that right.  If you need more lines, then usually it's time to split that function up.
+What do I mean by *small*?  Well, according to [Sandi Metz][metz] and [Uncle Bob][bob], methods should generally be [5 lines or less][fivelines].  You read that right.  If you need more lines, then usually it's time to split that function up.
 
 Writing small methods forces your hand to name things descriptively, which greatly helps with the readability of your code.  Your methods will also generally tend to *do one thing*.  That's what you're aiming for when creating new functions.
 
@@ -59,6 +59,8 @@ Let's go through a refactor session of some real-world code.  For this example I
     render layout: 'no_ember'
   end
 ```
+
+So yeah, this function has a lot of responsibilities.  It validates input, finds a user from a token, potentially sets error messages, and renders a page.  This is not ideal!
 
 The first thing you'll notice is the large peaks and valleys of the `if` statements, and in fact that's where we'll start.  The first `if` deals with trying to extract a user from a token.  So, I think a descriptive name of this functionality would be `get_user_from_token`.
 
@@ -208,7 +210,7 @@ Now it's 15 lines.  Next, let's look at the first `if` block that has to deal wi
     end
 ```
 
-That's easier to undertand and it's shorter. And, it can be it's on function as well!
+That's easier to undertand and it's shorter. And, it can be it's own function as well:
 
 ```ruby
   def get_user_from_token
@@ -225,7 +227,7 @@ That's easier to undertand and it's shorter. And, it can be it's on function as 
   end
 ```
 
-```
+```ruby
   def get_user_from_request
     if request.put?
       EmailToken.confirm(params[:token])
@@ -263,11 +265,11 @@ Finally, I think there's a bit more we can extract out of the `password_reset` f
   end
 ```
 
-And so there you have it,  we've refactored `password_reset` from 39 lines down to 9!
+And so there you have it,  we've refactored `password_reset` from **39** lines down to **9**!
 
 Could we go further?  You know, we probably could.  However, I think at this point the function is quite readable as it stands, and does not need more refactoring.  There is a point where you can introduce too much [*indirection*][indirection], where there are so many methods that it's hard to follow the string of logic.  It's a game of judgement, where readability trumps all.
 
-In short - much like Kramer [slicing thin meats][meats], you want *thin functions*.  So thin, the flavor has nowhere to hide.  Keep this in mind and your teammates will thank you!
+In short - much like Kramer [slicing thin meats][meats], you want *thin functions*.  So thin, **the flavor has nowhere to hide**.  Keep this in mind and your teammates will thank you!
 
 ![](/images/meats.png)
 
