@@ -1,8 +1,8 @@
 @charset "utf-8";
 
-$dark-color: #444F5A;
-$highlight-color: #EA5455;
-$secondary-color: #F07B3F;
+$dark-color: #203E5F;
+$highlight-color: #EB2632;
+$secondary-color: #CA2C3F;
 
 
 @import "normalize";
@@ -95,6 +95,7 @@ h1 {
 
 ul {
   margin-top: 5px;
+  padding-left: 0;
 }
 
 h2 {

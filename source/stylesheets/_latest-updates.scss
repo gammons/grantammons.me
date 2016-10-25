@@ -1,27 +1,22 @@
-.latest-updates >ul {
-  padding-left: 0;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.latest-updates > ul > li {
+.latest-updates ul li {
   list-style-type: none;
-  max-width: 370px;
   border: 1px solid #ccc;
-  margin: 10px;
   padding: 10px;
+  margin: 10px;
+  height: 100px;
   text-align: center;
   position: relative;
+  background-image: url(/images/black-thread-light.png);
+  display: flex;
+  align-items: center;
 }
-
-.latest-updates img {
-  text-align: center;
-}
-
 
 .latest-updates h2 {
   border-bottom: 1px solid #ddd;
+}
+
+.latest-updates h3 {
+  margin: 0;
 }
 
 .latest-updates img {
