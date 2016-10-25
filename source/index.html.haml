@@ -15,3 +15,5 @@ show_name: true
   %h2 Latest updates
   - page_articles.take(8).each_slice(2) do |group|
     = partial(:recent_update_row, locals: {articles: group})
+
+= partial(:social_icons)
