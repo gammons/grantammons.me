@@ -11,9 +11,11 @@
           Want to become a better developer?
           %span.glyphicon.glyphicon-remove
   .body.hidden
+    %p Did you like this post?
     %p Sign up to receive <em>short, focused, occasional</em> emails about how to level yourself up as a developer.
 
-    %p Enter your email address to get started today.
+    %p You'll also be the first to know about some awesome courses I have coming up!
+
     %form
       .form-group.form-group-lg
         %input(type="email" class="form-control email-address" placeholder="your@email.com")
@@ -22,17 +24,34 @@
 
 
 :javascript
-  $(".js-open-mailing-modal").click(function() {
+  var modalClosed = false;
+  var openModal = function() {
     $("section.mailing-list .closed").addClass("hidden");
     $("section.mailing-list .open").removeClass("hidden");
     $("section.mailing-list .body").removeClass("hidden");
     $("input.email-address").focus();
+  }
 
-  });
-
-  $(".js-close-mailing-modal").click(function() {
+  var closeModal = function() {
+    modalClosed = true;
     $("section.mailing-list .closed").removeClass("hidden");
     $("section.mailing-list .open").addClass("hidden");
     $("section.mailing-list .body").addClass("hidden");
+    ga('send', 'event', 'Mailing List Modal', 'Click Scroll Close')
+  }
+
+  $(window).scroll(function() {
+    if($(window).scrollTop() + $(window).height() >= ($(document).height() * 0.97)) {
+      if (!modalClosed) {
+        ga('send', 'event', 'Mailing List Modal', 'Scroll Open')
+        openModal();
+      }
+    }
   });
+
+  $(".js-open-mailing-modal").click(function() {
+    openModal()
+    ga('send', 'event', 'Mailing List Modal', 'Click Scroll Open')
+  });
+  $(".js-close-mailing-modal").click(closeModal);
 
