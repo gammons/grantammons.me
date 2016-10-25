@@ -1,0 +1,47 @@
+section.mailing-list {
+  position: fixed;
+  bottom: 0;
+  right: 15%;
+  width: 450px;
+  z-index: 100;
+  background-color: #fff;
+  -webkit-box-shadow: 0px 0px 10px 5px rgba(0,0,0,1);
+  -moz-box-shadow: 0px 0px 10px 5px rgba(0,0,0,1);
+  box-shadow: 0px 0px 10px 5px rgba(0,0,0,1);
+  border-top: 5px solid #ccc;
+  border-left: 5px solid #ccc;
+  border-right: 5px solid #ccc;
+  border-radius: 5px 5px 0 0;
+}
+
+section.mailing-list.closed {
+}
+
+section.mailing-list .header {
+  background-color: #fff;
+  border-bottom: 1px solid #ccc;
+  margin-top: 15px;
+  padding-bottom: 15px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+section.mailing-list h2 {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 22px;
+}
+
+section.mailing-list span {
+  float: right;
+}
+
+section.mailing-list a:hover {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+section.mailing-list .body {
+  margin-left: 20px;
+  margin-right: 20px;
+}
