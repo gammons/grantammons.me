@@ -45,3 +45,20 @@ section.mailing-list .body {
   margin-left: 20px;
   margin-right: 20px;
 }
+
+@media (max-width: 600px) {
+  section.mailing-list h2 {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 15px;
+  }
+
+  section.mailing-list {
+    width: 100%;
+    right: 0;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    border-radius: 5px 5px 0 0;
+  }
+}
