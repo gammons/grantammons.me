@@ -10,6 +10,7 @@ page '/*.json', layout: false
 page '/*.txt', layout: false
 
 activate :directory_indexes
+activate :gemoji
 
 # With alternative layout
 # page "/path/to/file.html", layout: :otherlayout

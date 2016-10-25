@@ -28,6 +28,7 @@ GEM
     fastimage (2.0.0)
       addressable (~> 2)
     ffi (1.9.14)
+    gemoji (2.1.0)
     haml (4.0.7)
       tilt
     hamster (3.0.0)
@@ -78,6 +79,9 @@ GEM
       servolux
       tilt (~> 1.4.1)
       uglifier (~> 3.0)
+    middleman-gemoji (0.1.2)
+      gemoji (>= 2.1)
+      middleman (>= 4.0)
     middleman-google-analytics (2.1.1)
       activesupport (~> 4.1)
       erubis
@@ -127,6 +131,7 @@ PLATFORMS
 DEPENDENCIES
   middleman (>= 4.0.0)
   middleman-blog
+  middleman-gemoji
   middleman-google-analytics
   middleman-livereload
   middleman-syntax
@@ -136,4 +141,4 @@ DEPENDENCIES
   wdm (~> 0.1.0)
 
 BUNDLED WITH
-   1.11.2
+   1.13.6
