@@ -2,7 +2,8 @@
 
 $text-color: rgb(58,65,69);
 $dark-color: #203E5F;
-$highlight-color: #CA2C3F;
+$link-color: #395EA6;
+
 $secondary-color: #CA2C3F;
 
 
@@ -19,9 +20,7 @@ body {
   font-weight: 300;
   font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
   line-height: 1.5em;
-  background-image: url("/images/smooth-wall-dark.png");
-  background-color: $dark-color;
-
+  background-color: #2F3C4F;
 }
 
 pre {
@@ -29,12 +28,13 @@ pre {
 }
 
 em {
-  color: $secondary-color;
   font-weight: bold;
-  font-style: italic;
+  font-style: normal;
 }
 
-
+.page li {
+  margin: 15px 0 15px 20px;
+}
 
 .logo {
   text-align: center;
@@ -65,7 +65,7 @@ em {
 }
 
 .page a {
-  color: $highlight-color;
+  color: $link-color;
 }
 
 p.callout {
@@ -116,13 +116,9 @@ h2 {
 }
 
 .page p {
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin-top: 15px;
+  margin-bottom: 15px;
 }
-
-// p {
-//   margin-top: 1px;
-// }
 
 .socialIcons {
   padding-top: 20px;

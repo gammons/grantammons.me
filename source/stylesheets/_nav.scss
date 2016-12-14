@@ -30,7 +30,7 @@ ul.nav li a {
   bottom: 3px;
   left: 0;
 
-  background-color: $highlight-color;
+  background-color: $link-color;
   visibility: hidden;
 
   -webkit-transform: scaleX(0);
@@ -66,4 +66,3 @@ ul.nav li.active a {
   border-width: 0;
   box-shadow: none;
 }
-
