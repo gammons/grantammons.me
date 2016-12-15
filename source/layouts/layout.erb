@@ -23,23 +23,14 @@
   <body class="<%= page_classes %>">
     <%= partial "nav" %>
 
-    <div class="logo">
-      <img src="/images/me.png" />
-    </div>
 
-    <div class="page">
-      <section class="firstSection">
-        <% if current_page.data.show_name %>
-          <h1>Grant Ammons</h1>
-        <% end %>
+    <%= yield %>
 
-        <% if current_page.data.header %>
-          <h2><%= current_page.data.header %></h2>
-        <% end %>
-      </section>
-      <%= yield %>
-      <div class="footer">
-        &copy; <%= Time.now.year %> Grant Ammons
+    <div class="container">
+      <div class="col-md-12">
+        <div class="footer">
+          &copy; <%= Time.now.year %> Grant Ammons
+        </div>
       </div>
     </div>
 

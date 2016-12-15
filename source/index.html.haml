@@ -4,16 +4,36 @@ page: home
 show_name: true
 ---
 
-%p.callout
-  I'm a <em>software engineer</em> and <em>technical leader</em> with 15 years of experience, and I love to create <em>awesome web apps.</em> Read more
-  %a about me
-  and
-  %a check out my blog!
+.me-header
+  .container
+    .row
+      .col-lg-4.col-md-12
+        %img.img-responsive.phone-logo(src="images/me.png")
+        .skills.left-skills
+          %h1.text-center Software Engineer.
+          %ul
+            %li - Over <em>10 years</em> of <em>Rails</em> experience.
+            %li - Expert knowledge of <em>React, Redux</em> and other Javascript frameworks.
+            %li - Strong knowledge of Devops: <em>AWS, Ansible, Linux.</em>
+            %li - Expert familiarity with <em>CSS3</em>.
 
+      .col-lg-4.col-md-12.logo
+        %img.img-responsive.desktop-logo(src="images/me.png")
 
-.latest-updates
-  %h2 Latest updates
-  - page_articles.take(8).each_slice(2) do |group|
-    = partial(:recent_update_row, locals: {articles: group})
+      .col-lg-4.col-md-12
+        .skills.right-skills
+          %h1.text-center Technical leader.
+          %ul
+            %li - Led <em>multiple teams</em> of Rails engineers.
+            %li - Knows what goes into a healthy <em>engineering culture</em>.
+            %li - Co-organizer of <a href="#">CTOSchool Philly</a>.
+
+.container
+  .row
+    .col-md-12
+      .latest-updates
+        %h2 Latest updates
+        - page_articles.take(8).each_slice(2) do |group|
+          = partial(:recent_update_row, locals: {articles: group})
 
 = partial(:social_icons)

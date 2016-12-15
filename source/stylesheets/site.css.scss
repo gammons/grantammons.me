@@ -3,9 +3,7 @@
 $text-color: rgb(58,65,69);
 $dark-color: #203E5F;
 $link-color: #395EA6;
-
 $secondary-color: #CA2C3F;
-
 
 @import "normalize";
 @import "nav";
@@ -20,8 +18,75 @@ body {
   font-weight: 300;
   font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
   line-height: 1.5em;
-  background-color: #2F3C4F;
 }
+
+.me-header {
+  background-color: #eee;
+}
+
+.skills {
+  color: #333;
+  background-color: rgba(255,255,255,0.9);
+}
+
+.skills li {
+  list-style-type: none;
+}
+
+// phones
+@media(max-width: 768px) {
+  .me-header .col-md-12 {
+    margin: 0;
+    padding: 0;
+    background-image: url('../images/grass.jpg');
+  }
+
+  .skills {
+    padding: 10px;
+  }
+  .desktop-logo {
+    display: none;
+  }
+  .phone-logo {
+    display: block;
+    margin: auto;
+  }
+}
+
+// bigger devices
+@media(min-width: 768px) {
+  .me-header {
+    padding: 40px 0 40px 0;
+    background-image: url('../images/grass.jpg');
+  }
+  .me-header .col-lg-4 {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .me-header .skills {
+    padding: 5px 20px 5px 20px;
+    margin-top: 20px;
+  }
+
+  .skills {
+    min-height: 350px;
+  }
+
+  .left-skills {
+    border-radius: 10px 0 0 10px;
+  }
+
+  .right-skills {
+    border-radius: 0 10px 10px 0;
+  }
+  .desktop-logo {
+    display: block;
+  }
+  .phone-logo {
+    display: none;
+  }
+}
+
 
 pre {
   font-size: 16px;
@@ -38,14 +103,13 @@ em {
 
 .logo {
   text-align: center;
+  z-index: 10;
 }
 
 .logo img {
-  border-radius: 80px;
-  border: 2px solid rgb(150,150,150);
-  box-shadow: 0px 0px 5px black;
-  height: 160px;
-  margin-top: 10px;
+  border: 2px solid #666;
+  box-shadow: 0px 0px 30px 0px rgba(0,0,0,0.75);
+  border-radius: 10px;
 }
 
 .page {
@@ -53,15 +117,6 @@ em {
   padding-top: 80px;
   padding-bottom: 30px;
   margin-bottom: 80px;
-  padding-left: 5%;
-  padding-right: 5%;
-  max-width: 915px;
-  margin-left: auto;
-  margin-right: auto;
-
-
-  background-color: #fcfcfc;
-  box-shadow: 0px 0px 2px rgb(150,150,150);
 }
 
 .page a {
@@ -94,30 +149,30 @@ p.callout {
   margin-top: 10px;
 }
 
-h1 {
-  color: rgb(60,60,68);
-  font-size: 55px;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  font-weight: 400;
-  font-family: 'Patua One', cursive;
-}
+// h1 {
+//   color: rgb(60,60,68);
+//   font-size: 55px;
+//   margin-top: 10px;
+//   margin-bottom: 10px;
+//   font-weight: 400;
+//   font-family: 'Patua One', cursive;
+// }
 
 ul {
   margin-top: 5px;
   padding-left: 0;
 }
 
-h2 {
-  color: rgba(0,0,0,0.8);
-  margin: 0;
-  margin-top: 30px;
-  margin-bottom: 15px;
-}
-
+// h2 {
+//   color: rgba(0,0,0,0.8);
+//   margin: 0;
+//   margin-top: 30px;
+//   margin-bottom: 15px;
+// }
+//
 .page p {
-  margin-top: 15px;
-  margin-bottom: 15px;
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
 
 .socialIcons {
@@ -132,8 +187,8 @@ h2 {
 
 .socialIcons li a {
   color: rgb(140,140,140);
-  font-size: 42px;
-  margin: 15px;
+  font-size: 30px;
+  margin: 10px;
 }
 
 .footer {
