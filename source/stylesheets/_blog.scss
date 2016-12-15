@@ -1,37 +1,28 @@
-article.post {
+.page.post {
   padding-bottom: 4rem;
 }
 
-article .author-thumb {
+.page .author-thumb {
   border-radius: 100%;
 }
 
-article footer {
-  font-size: 14px;
-  color: #ccc;
-}
-
-article footer a {
-  color: #aaa;
-}
-
-article time {
+.page time {
   margin-left: 5px;
   padding-left: 10px;
   border-left: #EBF2F6 1px solid;
 }
 
-article em {
+.page em {
   font-weight: 300;
   color: $text-color;
 }
 
-article blockquote p {
+.page blockquote p {
   font-size: 28px;
   font-style: italic;
 }
 
-article.blog-post img {
+.page img {
   left: 50%;
   display: block;
   max-width: 100%;
@@ -41,7 +32,7 @@ article.blog-post img {
   padding: 0.6em 0;
 }
 
-article.blog-post img.gemoji {
+.page img.gemoji {
   left: 0;
   display: inline;
   transform: none;

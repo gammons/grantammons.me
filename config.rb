@@ -9,6 +9,8 @@ page '/*.xml', layout: false
 page '/*.json', layout: false
 page '/*.txt', layout: false
 
+set :layout, "main"
+
 activate :directory_indexes
 activate :gemoji
 
@@ -51,7 +53,7 @@ configure :build do
 end
 
 activate :blog do |blog|
-  blog.layout = "blog"
+  blog.layout = "main"
   # This will add a prefix to all links, template references and source paths
   # blog.prefix = "blog"
 

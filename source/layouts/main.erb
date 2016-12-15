@@ -4,9 +4,10 @@
     <meta content="IE=edge" http-equiv="X-UA-Compatible">
     <meta charset="utf-8">
     <meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+    <meta name="google-site-verification" content="Su9DAzyh4kqIZRj1EP_bybJM0q_NdYemm_ekm32s7F8" />
 
     <!-- Use title if it's in the page YAML frontmatter -->
-    <title><%= current_page.data.title || "Grant Ammons" %></title>
+    <title>Grant Ammons - <%= current_page.data.title %></title>
 
     <link href="https://fonts.googleapis.com/css?family=Arimo:400,700|Roboto:300,300i,500,500i,700,700i" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Patua+One" rel="stylesheet">
@@ -14,40 +15,26 @@
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" />
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
 
-    <%= partial :favicon %>
-    <%= stylesheet_link_tag :site, :syntax %>
+    <%= stylesheet_link_tag :site %>
     <%= javascript_include_tag :all %>
-    <script type='text/javascript' src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <%= partial :favicon %>
   </head>
 
   <body class="<%= page_classes %>">
-    <%= partial "nav" %>
-
-    <div class="logo">
-      <img src="/images/me.png" />
-    </div>
-
-    <div class="page">
-      <section class="firstSection">
-        <h1><%= current_page.data.title %></h1>
-      </section>
-
-      <article class="blog-post">
-        <%= yield %>
-      </article>
-
-      <hr />
-      <%= partial(:social_icons) %>
-      <%= partial :disqus %>
-      <%= partial :mailing_list %>
-
-      <div class="footer">
-        &copy; <%= Time.now.year %> Grant Ammons
+    <%= partial :header %>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h1 class="title"><%= current_page.data.title %></h1>
+          <div class="page">
+            <%= yield %>
+          </div>
+        </div>
       </div>
     </div>
-
+    <%= partial :footer %>
     <%= google_analytics_universal_tag %>
-    <script type='text/javascript' src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   </body>
+  <script type='text/javascript' src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script type='text/javascript' src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </html>
-
