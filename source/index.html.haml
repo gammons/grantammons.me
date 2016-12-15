@@ -5,34 +5,42 @@ show_name: true
 ---
 
 .me-header
+  = partial :nav
+
   .container
     .row
-      .col-lg-4.col-md-12
-        %img.img-responsive.phone-logo(src="images/me.png")
-        .skills.left-skills
-          %h1.text-center Software Engineer.
-          %ul
-            %li - Over <em>10 years</em> of <em>Rails</em> experience.
-            %li - Expert knowledge of <em>React, Redux</em> and other Javascript frameworks.
-            %li - Strong knowledge of Devops: <em>AWS, Ansible, Linux.</em>
-            %li - Expert familiarity with <em>CSS3</em>.
-
-      .col-lg-4.col-md-12.logo
+      .col-md-12.logo.centered
         %img.img-responsive.desktop-logo(src="images/me.png")
+      .col-md-12.text-center
+        %h1.name-boss Grant Ammons
+        %strong Freelance consultant Extraordinaire
+        = partial :arrows
 
-      .col-lg-4.col-md-12
-        .skills.right-skills
-          %h1.text-center Technical leader.
-          %ul
-            %li - Led <em>multiple teams</em> of Rails engineers.
-            %li - Knows what goes into a healthy <em>engineering culture</em>.
-            %li - Co-organizer of <a href="#">CTOSchool Philly</a>.
+.skills
+  .container
+    .row
+      .col-md-6.border-right
+        %h1.text-center Software Engineer.
+        %ul
+          %li Over <em>10 years</em> of <em>Rails</em> full-stack experience.
+          %li Expert knowledge of <em>React, Redux</em> and other Javascript frameworks.
+          %li Strong knowledge of Devops: <em>AWS, Ansible, Linux.</em>
+          %li Expert familiarity with <em>CSS3</em>.
+
+      .col-md-6
+        %h1.text-center Technical leader.
+        %ul
+          %li Built and Led <em>multiple teams</em> of Rails engineers.  Helped them do their <em>best work</em>.
+          %li Knows what goes into a healthy <em>engineering culture</em> and <em>team happiness</em>.
+          %li Co-organizer of <a href="#">CTOSchool Philly</a>.
 
 .container
   .row
     .col-md-12
       .latest-updates
-        %h2 Latest updates
+        %h2
+          %span
+            Latest updates
         - page_articles.take(8).each_slice(2) do |group|
           = partial(:recent_update_row, locals: {articles: group})
 

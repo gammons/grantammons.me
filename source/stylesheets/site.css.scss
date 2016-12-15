@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,400');
 @charset "utf-8";
 
 $text-color: rgb(58,65,69);
@@ -10,6 +11,7 @@ $secondary-color: #CA2C3F;
 @import "blog";
 @import "latest-updates";
 @import "mailing-list";
+@import "arrows";
 
 body {
   color: rgb(58, 65, 69);
@@ -21,68 +23,68 @@ body {
 }
 
 .me-header {
-  background-color: #eee;
+  color: #eee;
+  background: url(../images/mountain.jpg) no-repeat center center;
+  background-size: cover;
+  min-height: 685px;
 }
 
-.skills {
-  color: #333;
-  background-color: rgba(255,255,255,0.9);
+.me-header h1.name-boss {
+  font-weight: 100;
+  font-size: 100px;
+  margin: 30px 0 0 0;
+}
+
+.me-header strong {
+  font-weight: 100;
+}
+
+.skills .border-right {
+  border-right: 1px solid #ccc;
+}
+
+.skills ul {
+  margin: 30px;
 }
 
 .skills li {
-  list-style-type: none;
+  list-style-type: disc;
+  margin: 10px 0 10px 0;
+}
+
+.skills h1 {
+  font-weight: 100;
 }
 
 // phones
-@media(max-width: 768px) {
-  .me-header .col-md-12 {
-    margin: 0;
-    padding: 0;
-    background-image: url('../images/grass.jpg');
-  }
-
-  .skills {
-    padding: 10px;
-  }
-  .desktop-logo {
+@media(max-width: 992px) {
+  .desktops {
     display: none;
   }
-  .phone-logo {
+
+  .smallscreens {
     display: block;
-    margin: auto;
   }
 }
 
 // bigger devices
-@media(min-width: 768px) {
-  .me-header {
-    padding: 40px 0 40px 0;
-    background-image: url('../images/grass.jpg');
+@media(min-width: 992px) {
+  .md {
+    margin-top: 30px;
   }
-  .me-header .col-lg-4 {
-    padding-left: 0;
-    padding-right: 0;
+  .desktops {
+    display: block;
   }
-  .me-header .skills {
-    padding: 5px 20px 5px 20px;
-    margin-top: 20px;
+
+  .desktops .col-md-4 {
+    padding: 0;
   }
 
   .skills {
-    min-height: 350px;
+    min-height: 300px;
   }
 
-  .left-skills {
-    border-radius: 10px 0 0 10px;
-  }
-
-  .right-skills {
-    border-radius: 0 10px 10px 0;
-  }
-  .desktop-logo {
-    display: block;
-  }
-  .phone-logo {
+  .smallscreens {
     display: none;
   }
 }
@@ -103,13 +105,16 @@ em {
 
 .logo {
   text-align: center;
+  width: 350px;
   z-index: 10;
+  float: none;
+  margin: 50px auto 0 auto;
 }
 
 .logo img {
   border: 2px solid #666;
   box-shadow: 0px 0px 30px 0px rgba(0,0,0,0.75);
-  border-radius: 10px;
+  border-radius: 100%;
 }
 
 .page {
@@ -149,27 +154,11 @@ p.callout {
   margin-top: 10px;
 }
 
-// h1 {
-//   color: rgb(60,60,68);
-//   font-size: 55px;
-//   margin-top: 10px;
-//   margin-bottom: 10px;
-//   font-weight: 400;
-//   font-family: 'Patua One', cursive;
-// }
-
 ul {
   margin-top: 5px;
   padding-left: 0;
 }
 
-// h2 {
-//   color: rgba(0,0,0,0.8);
-//   margin: 0;
-//   margin-top: 30px;
-//   margin-bottom: 15px;
-// }
-//
 .page p {
   margin-top: 30px;
   margin-bottom: 30px;
