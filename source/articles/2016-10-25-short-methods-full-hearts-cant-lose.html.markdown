@@ -1,7 +1,8 @@
 ---
 title: Short methods, full hearts, can't lose
 date: 2016-10-25 11:09 UTC
-tags: cleancode, seniordevchops
+tags: cleancode
+comments: true
 ---
 
 ![](/images/shortMethods.jpg)
@@ -279,4 +280,3 @@ In short - much like Kramer [slicing thin meats][meats], you want *thin function
 [metz]: http://www.sandimetz.com/
 [bob]: https://cleancoders.com/episode/clean-code-episode-3/show
 [discourse]: https://github.com/discourse/discourse
-

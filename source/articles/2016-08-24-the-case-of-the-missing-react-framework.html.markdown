@@ -1,8 +1,11 @@
 ---
 title: The Case of the Missing React Framework
 date: "2016-08-24"
-tags: rants
+tags:
+  - rants
+  - javascript
 cover: react-malaise.png
+comments: true
 ---
 
 Learning [React](https://facebook.github.io/react/) is easy, but learning how to properly architect an app using React is an exercise in frustration. React is just the view layer and Flux is a pattern for updating views. But there is a large gap - how to organize your data in a React app. And while React is an amazing library, Facebook left the data organization part as an exercise for the reader. And this, I believe, is a big problem.

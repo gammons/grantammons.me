@@ -1,9 +1,10 @@
 ---
 title: 4 awesome ways we leveled up as a dev team
 date: 2016-01-11 18:21 UTC
-tags: software, management
-cover: heads.png
-page: blog
+tags:
+  - software
+  - leadership
+comments: true
 ---
 
 A major goal you should have as an technical leader is to help grow the abilities of your team.
@@ -136,6 +137,3 @@ Zach Holman has an [excellent website][sio] that has great resources when you ne
 And that’s it! The above 4 ways will help catapult your team to the next level. The above have worked wonders for my team.
 
 Give your devs the time to better themselves, and you will be astounded with the results.
-
-
-

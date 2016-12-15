@@ -1,9 +1,10 @@
 ---
 title: Keep an Engineering Manifesto
 date: 2015-12-08 13:15 UTC
-tags: engineering leadership
-cover: manifesto.png
-page: blog
+tags:
+  - processes
+  - leadership
+comments: true
 ---
 
 At [PipelineDeals](https://www.pipelinedeals.com) we have an engineering manifesto.  Our manifesto is the backbone of what we stand for as a team.  They are high level, core underpinnings of our team's culture. They read like team-level objectives, but they trancend any time-based measurement.  They are here for the life of the company.

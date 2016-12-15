@@ -2,9 +2,10 @@
 title: How to deliver high quality software
 subtitle: "QA 101: Defining the terms, what works, and who does what"
 date: 2016-03-23 12:21 UTC
-tags: softare,development
-cover: buildings.jpeg
-page: blog
+tags:
+  - software
+  - processes
+comments: true
 ---
 
 When it comes to software, the term “QA” itself is highly loaded. Because what is it, really? Is it just a thing at the end of the software delivery line, where quality gets lovingly sprayed on at the end, achieving  a nice glossy sheen? Is it a separate department that bolts on quality, where the developers don’t really need to worry about it after they throw it over the wall? Is it that one integration test that one developer wrote, once, and it’s “probably good enough”? Of course not!

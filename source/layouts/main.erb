@@ -15,7 +15,7 @@
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" />
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
 
-    <%= stylesheet_link_tag :site %>
+    <%= stylesheet_link_tag :site, :syntax %>
     <%= javascript_include_tag :all %>
     <%= partial :favicon %>
   </head>
@@ -28,6 +28,12 @@
           <h1 class="title"><%= current_page.data.title %></h1>
           <div class="page">
             <%= yield %>
+            <% if current_page.data.comments %>
+              <div class="middle-line">
+                <h2><span>Comments</span></h2>
+              </div>
+              <%= partial :disqus %>
+            <% end %>
           </div>
         </div>
       </div>

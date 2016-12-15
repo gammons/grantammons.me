@@ -26,13 +26,13 @@ body {
 
 @media(min-width: 768px) {
   .main-container {
-    height: calc(100vh - 446px);
+    min-height: calc(100vh - 446px);
   }
 }
 
 @media(max-width: 768px) {
   .main-container {
-    height: calc(100vh - 388px);
+    min-height: calc(100vh - 388px);
   }
 }
 
@@ -111,4 +111,27 @@ ul {
 
 h1.title {
   text-align: center;
+}
+
+.middle-line > h2 {
+  position: relative;
+  text-align: center;
+  font-weight: 100;
+}
+
+.middle-line h2 span {
+  background: #fff;
+  padding: 0 15px;
+  position: relative;
+  z-index: 1;
+}
+
+.middle-line h2:before {
+  background: #ddd;
+  content: "";
+  display: block;
+  height: 1px;
+  position: absolute;
+  top: 50%;
+  width: 100%;
 }

@@ -1,9 +1,10 @@
 ---
 title: How dependency lines work in object-oriented design
 date: 2015-11-10 13:01 UTC
-tags: architecture
-cover: Railway-in-the-fog.jpg
-page: blog
+tags:
+  - software
+  - architecture
+comments: true
 ---
 
 When you look at an object dependency graph, it's not 100% clear how to read it.  When one object points to another,
@@ -195,4 +196,3 @@ And the answer is, __no!__.  But why?  Well, I'll tell you why.
 `PostingPolicy` is depending on an __object__ that has the following methods: `_has_post_access?` and `is_admin?`.  This object could be _any_ type.  It could be a mock object in a test.  It could be an instance of a plain ol' ruby object that has those methods.  Or, it could be a `User` class that inherits from `ActiveRecord::Base`.
 
 The point is, `PostingPolicy` is dependent on being passed in an object that implements those methods.  It is dependent on an `interface`.  Much like our `Engine` example above, we're passing in the object we need, rather than naming it directly.  This is how you keep your business logic free and clear of being dependent on your framework.  It also makes your code easier to test!
-

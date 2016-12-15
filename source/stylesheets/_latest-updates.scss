@@ -12,28 +12,6 @@
   justify-content: center;
 }
 
-.latest-updates > h2 {
-  position: relative;
-  text-align: center;
-  font-weight: 100;
-}
-
-.latest-updates h2 span {
-  background: #fff;
-  padding: 0 15px;
-  position: relative;
-  z-index: 1;
-}
-
-.latest-updates h2:before {
-  background: #ddd;
-  content: "";
-  display: block;
-  height: 1px;
-  position: absolute;
-  top: 50%;
-  width: 100%;
-}
 
 .latest-updates h3 {
   margin: 0;

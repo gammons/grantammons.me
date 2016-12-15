@@ -1,9 +1,10 @@
 ---
 title: Testing time-dependent functions
 date: 2016-06-01 10:03 UTC
-tags: testing
+tags:
+  - testing
 cover: clock.jpg
-page: blog
+comments: true
 ---
 
 Recently I started a weekend project called [Todolist](http://todolist.site), which is a little Go application for the command line that does simple task management.  Todolist is centered around due dates,  and I needed a good way to unit test my code.  So the question was, how do I test functions with dates in Go?

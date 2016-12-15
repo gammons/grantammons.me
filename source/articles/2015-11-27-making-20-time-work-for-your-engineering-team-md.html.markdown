@@ -2,8 +2,11 @@
 title: Making 20% time work for your engineering team
 date: 2015-11-27 14:23 UTC
 cover: 80_20.jpg
-tags: engineering teams investment-time
-page: blog
+tags:
+  - software
+  - leadership
+  - processes
+comments: true
 ---
 
 At [PipelineDeals][1], believe in 20% time.  We call it Investment Time.  Each Friday, engineers are free from the shackles of our backlog to work on creative projects.  It feeds an enormous amount of creativity and happiness with our teams. Also, it helps other departments run better, and pushes our goals as a team forward.

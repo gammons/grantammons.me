@@ -1,9 +1,10 @@
 ---
 title: Ditching Scrum for Kanban - The best decision we've made as a team
 date: 2015-12-14 18:21 UTC
-tags: engineering process software
-cover: copenhagen.png
-page: blog
+tags:
+  - processes
+  - software
+comments: true
 ---
 
 The following is a story about how we matured as an engineering team.  We went from an ad-hoc process to Scrum, and used Scrum for a whole year.  Scrum leveled us up as a team in terms of structure and process.  But it caused major morale issues.  Then we found Kanban.  We implemented it and have never looked back.
@@ -63,4 +64,3 @@ Kanban works well for our team and our company.  [It has also worked for other c
 [3]: https://www.youtube.com/watch?v=Jx6_E5XxqEo
 [4]: https://stormpath.com/blog/so-long-scrum-hello-kanban
 [5]: https://twitter.com/PeterBell
-

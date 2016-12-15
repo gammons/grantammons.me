@@ -1,9 +1,9 @@
 ---
 title: The importance of celebrating success with your team
 date: 2015-12-29 20:23 UTC
-tags: teams, management
-cover: group.jpeg
-page: blog
+tags:
+  - leadership
+comments: true
 ---
 
 > “Ok, so we launched our new feature last night. However we have 30 customer emails from last night about bugs, and we need to hit those right away. Also the error rate is a little spikey, which probably means there’s more issues, and our response time is up a few ticks. Have a nice day!”

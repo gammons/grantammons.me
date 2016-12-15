@@ -1,9 +1,9 @@
 ---
 title: Bitcoin, Litecoin, Dogecoin - Exploring the block chain
 date: 2014-01-17 14:26 UTC
-tags: bitcoin
-cover: bitcoin.jpg
-page: blog
+tags:
+  - bitcoin
+comments: true
 ---
 
 Ever go to a site like <http://blockchain.info> and just wonder what all those numbers mean?  Well, wonder no more!  This guide will have you exploring the block chain like a pro.  This guide is separated into two main sections -- a brief, high level overview of transactions and blocks, followed by a deep inspection of a single block, and the transactions within it.
@@ -168,4 +168,3 @@ Well, hopefully you have gained a more thorough understanding of what you're see
 * [Khan academy on bitcoin](https://www.khanacademy.org/economics-finance-domain/core-finance/money-and-banking/bitcoin/v/bitcoin---transaction-records)
 * http://www.coindesk.com/information/how-bitcoin-mining-works/
 * [bitcoin protocol specification](https://en.bitcoin.it/wiki/Protocol_specification)
-

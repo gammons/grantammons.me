@@ -1,9 +1,10 @@
 ---
 title: Where the logic hides in Rails apps
 date: 2012-12-22 11:05 UTC
-tags: cleancode, rails, seniordevchops
-cover: computer.jpg
-page: blog
+tags:
+  - architecture
+  - rails
+comments: true
 ---
 
 DHH recently authored a [SVN blog post](http://37signals.com/svn/posts/3372-put-chubby-models-on-a-diet-with-concerns) that advocated breaking up fat models into separate mixins that would live in a new directory in the rails structure, app/concerns.
@@ -158,4 +159,3 @@ rails](http://www.confreaks.com/videos/641-gogaruco2011-fast-rails-tests).  Your
 
 Continue the conversation on [hacker
 news](http://news.ycombinator.com/item?id=4960232).
-

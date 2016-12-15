@@ -2,9 +2,9 @@
 title: The life-changing benefits of side projects
 subtitle: Start today!  All you nee is a bit of time and discipline.
 date: 2016-07-22 13:50 UTC
-tags: side projects
-cover: buildshit.png
-page: blog
+tags:
+  - inspirational
+comments: true
 ---
 
 I am an avid side project-er. At any point in time I always have at least one “thing” going on in the background that feeds my appetite for playing with new tech and learning new stuff.
@@ -66,5 +66,3 @@ I recently listened to the latest [Changelog](https://changelog.com/210/) podcas
 Duck Dynasty can wait. Spend 30 minutes today doing something that will further yourself and your career. [Crush some Rails bugs](http://guides.rubyonrails.org/contributing_to_ruby_on_rails.html). [Learn React and Redux](https://github.com/petehunt/react-howto) by re-creating [2048](https://gabrielecirulli.github.io/2048/). Write a choose-your-own-adventure game in [Go](https://golang.org/). It’s all about finding a little bit of discipline and motivation, and it will work wonders for your future self.
 
 ![](doit.jpeg)
-
-

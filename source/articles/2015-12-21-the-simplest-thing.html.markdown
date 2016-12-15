@@ -1,7 +1,9 @@
 ---
-title: The simplest thing you can do to not violate the first principle of Agile
+title: The first principle of agile - it's a big one!
 date: 2015-12-21 19:23 UTC
-tags: software, process
+tags:
+  - software
+  - processes
 cover: agile.png
 page: blog
 ---
@@ -54,4 +56,3 @@ These types of updates are so much better than just saying "our team's velocity 
 There are plenty of "Agile" tools and metrics out there.  Beware - hey can get away from you, at the cost of your team's happiness.  Tools like Jira make it *amazingly easy* to break the first priniple of Agile.
 
 Keep it simple. Have conversations. Write paragraphs. Overcommunicate.  Don't let the tool replace those.
-
