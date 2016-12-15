@@ -34,14 +34,17 @@ show_name: true
           %li Knows what goes into a healthy <em>engineering culture</em> and <em>team happiness</em>.
           %li Co-organizer of <a href="#">CTOSchool Philly</a>.
 
-.container
-  .row
-    .col-md-12
-      .latest-updates
-        %h2
-          %span
-            Latest updates
-        - page_articles.take(8).each_slice(2) do |group|
-          = partial(:recent_update_row, locals: {articles: group})
+.latest-updates-container
+  .container
+    .row
+      .col-md-12
+        .latest-updates
+          %h2
+            %span
+              Latest updates
 
-= partial(:social_icons)
+    = partial :articles
+
+    .read-more
+      %h4
+        %a(href="/blog") Read more articles

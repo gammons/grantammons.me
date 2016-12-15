@@ -1,0 +1,6 @@
+- page_articles.take(8).each_slice(2).each do |group|
+  .row
+    .col-md-6.col-sm-12
+      = partial :article, locals: {article: group[0]}
+    .col-md-6.col-sm-12
+      = partial :article, locals: {article: group[1]}

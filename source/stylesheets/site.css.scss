@@ -56,40 +56,6 @@ body {
   font-weight: 100;
 }
 
-// phones
-@media(max-width: 992px) {
-  .desktops {
-    display: none;
-  }
-
-  .smallscreens {
-    display: block;
-  }
-}
-
-// bigger devices
-@media(min-width: 992px) {
-  .md {
-    margin-top: 30px;
-  }
-  .desktops {
-    display: block;
-  }
-
-  .desktops .col-md-4 {
-    padding: 0;
-  }
-
-  .skills {
-    min-height: 300px;
-  }
-
-  .smallscreens {
-    display: none;
-  }
-}
-
-
 pre {
   font-size: 16px;
 }
@@ -139,7 +105,7 @@ p.callout {
     margin-right: 0;
   }
   .socialIcons li a {
-    color: rgb(120,120,120);
+    color: #fafafa;
     font-size: 28px;
     margin: 15px;
   }
@@ -175,13 +141,25 @@ ul {
 }
 
 .socialIcons li a {
-  color: rgb(140,140,140);
+  color: #ccc;
   font-size: 30px;
   margin: 10px;
 }
 
 .footer {
-  margin-top: 30px;
+  padding: 10px 0 30px 0;
   text-align: center;
   font-size: 13px;
+  background-color: rgb(66,79,89);
+  color: #ccc;
+}
+
+.read-more {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.bottom-nav a {
+  font-size: 16px;
+  color: #eee;
 }
