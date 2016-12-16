@@ -29,9 +29,8 @@
           <div class="page">
             <%= yield %>
 
-            <%= partial :new_mailing_list %>
-
             <% if current_page.data.comments %>
+              <%= partial :new_mailing_list %>
               <div class="middle-line">
                 <h2><span>Comments</span></h2>
               </div>
