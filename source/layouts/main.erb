@@ -28,12 +28,16 @@
           <h1 class="title"><%= current_page.data.title %></h1>
           <div class="page">
             <%= yield %>
+
+            <%= partial :new_mailing_list %>
+
             <% if current_page.data.comments %>
               <div class="middle-line">
                 <h2><span>Comments</span></h2>
               </div>
               <%= partial :disqus %>
             <% end %>
+
           </div>
         </div>
       </div>

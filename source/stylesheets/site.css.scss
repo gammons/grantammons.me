@@ -11,7 +11,6 @@ $secondary-color: #CA2C3F;
 @import "nav";
 @import "blog";
 @import "latest-updates";
-@import "mailing-list";
 @import "arrows";
 @import "main-splash";
 
@@ -34,6 +33,11 @@ body {
   .main-container {
     min-height: calc(100vh - 388px);
   }
+}
+
+.main-container p {
+  margin-top: 15px;
+  margin-bottom: 15px;
 }
 
 pre {
@@ -134,4 +138,18 @@ h1.title {
   position: absolute;
   top: 50%;
   width: 100%;
+}
+
+.mailing-list {
+  background-color: #efefef;
+}
+
+.mail-input {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.mail-input .column {
+  padding-left: 0;
+  padding-right: 0;
 }
