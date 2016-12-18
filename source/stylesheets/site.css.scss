@@ -23,9 +23,21 @@ body {
   line-height: 1.5em;
 }
 
+pre {
+  font-size: 16px;
+}
+
 @media(min-width: 768px) {
   .main-container {
     min-height: calc(100vh - 446px);
+  }
+  pre {
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+  .cp_embed_wrapper {
+    margin-left: 5%;
+    margin-right: 5%;
   }
 }
 
@@ -40,13 +52,11 @@ body {
   margin-bottom: 15px;
 }
 
-pre {
-  font-size: 16px;
-}
+
+
 
 em {
-  font-weight: bold;
-  font-style: normal;
+  font-style: italic;
 }
 
 .page li {
