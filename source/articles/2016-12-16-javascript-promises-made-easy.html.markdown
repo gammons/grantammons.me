@@ -13,7 +13,7 @@ Promises hold the **promise** (yup) that they will make your asynchronous code e
 
 Promises are now native to all modern browsers, and the pattern is ubiquitous in the Javascript community.  So if you haven't taken the time to learn it yet, settle in and learn you Promises for great justice.
 
-## A simple example
+## Example 1:  Random numbers (but not too high)
 
 Lots of calls in javascript are asynchronous.  That is, you must supply them with a callback function.  The best example of how promises work is to just dive in and *promisify* an asynchronous call.
 
@@ -106,8 +106,7 @@ Below is a working example of the code:
 
 Are there other benefits to using promises?  You betcha!  There *are* other benefits that look *promising* (yup) as well!
 
-See the thing is, whatever you return in the `then` block of a promise *gets wrapped in a promise* that immediately resolves.  If you are already returning a promise, it will not wrap.
-
+See the thing is, promises always return promises.  Whatever you return in the `then` block of a promise *gets wrapped in a promise* that immediately resolves.  If you are already returning a promise, it will not wrap.
 
 This has some pretty nifty IRL consequences, because you can chain `then` calls and avoid the dreaded [pyramid of doom](http://web.archive.org/web/20151209151711/http://tritarget.org/blog/2012/11/28/the-pyramid-of-doom-a-javascript-style-trap).
 
@@ -129,33 +128,15 @@ for(let x = 0; x < 10; x++) {
 }
 ```
 
-The other benefit is that aysnchronous calls can be sequenced easily.  Since `then` is run *after* an asynchronous function is done, chaining `then` calls ensures that the asynchronous calls are sequentially run.
+This has the potential to flatten out a lot of deeply nested asynchronous calls.
 
-This is enormously easier to comprehend than the alternative, which are mountains of callback functions.  These callback functions have the potential to get very deeply nested:
+## Example #2: Promise fun by lighting balls
 
-```javascript
-(function($) {
-  $(function(){
-    $("button").click(function(e) {
-      $.get("/test.json", function(data, textStatus, jqXHR) {
-        $(".list").each(function() {
-          $(this).click(function(e) {
-            setTimeout(function() {
-              alert("Hello World!");
-            }, 1000);
-          });
-        });
-      });
-    });
-  });
-})(jQuery);
-```
-
-Yuck.  Yes, using promises has the potential to flatten out this giant mountaintop of code.
-
-## Chaining promises example
+Using promises, aysnchronous calls can be sequenced easily.  Since `then` is run *after* an asynchronous function is done, chaining `then` calls ensures that the asynchronous calls are sequentially run.
 
 Since it's (currently) 'tis the season, we'll be lighting some balls to celebrate. So I present to you: **BALL LIGHTER.**  
+
+### Sequential ball lighting (the non-promise way)
 
 First, we'll light some balls the non-promise way, and see where that takes us.  After that we'll use promises to light up those balls (and our hearts), and see the difference in the code.
 
@@ -294,14 +275,31 @@ Notice that we do execute the last `then` block after the `catch` in the example
 <p data-height="550" data-theme-id="0" data-slug-hash="JbxXEa" data-default-tab="js,result" data-user="gammons" data-embed-version="2" data-pen-title="Promises with errors, and a then at the end" class="codepen">See the Pen <a href="http://codepen.io/gammons/pen/JbxXEa/">Promises with errors, and a then at the end</a> by Grant Ammons (<a href="http://codepen.io/gammons">@gammons</a>) on <a href="http://codepen.io">CodePen</a>.</p>
 <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 
+## Parallel asynchronous events
+
+You can also run promise-based functions using `Promise.all`.  Consider the following example:
+
+<p data-height="550" data-theme-id="0" data-slug-hash="bBzoyW" data-default-tab="js,result" data-user="gammons" data-embed-version="2" data-pen-title="Parallel execution" class="codepen">See the Pen <a href="https://codepen.io/gammons/pen/bBzoyW/">Parallel execution</a> by Grant Ammons (<a href="http://codepen.io/gammons">@gammons</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+
+We're doing a lot of very similar looking, duplicative code in `lightBallsInParallel`.  By using `Promise.all`, it can be cleaned up significantly, and we get a single place to handle exceptions:
+
+<p data-height="550" data-theme-id="0" data-slug-hash="yVZPOq" data-default-tab="js,result" data-user="gammons" data-embed-version="2" data-pen-title="Parallel execution with Promise.all" class="codepen">See the Pen <a href="https://codepen.io/gammons/pen/yVZPOq/">Parallel execution with Promise.all</a> by Grant Ammons (<a href="http://codepen.io/gammons">@gammons</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+
+Now, let's introduce an exception call.  Notice that even though the 3rd `lightBall` had an error, the fourth call still ran.  
+
+<p data-height="550" data-theme-id="0" data-slug-hash="zoePBb" data-default-tab="js,result" data-user="gammons" data-embed-version="2" data-pen-title="Parallel execution with Promise.all, with exception" class="codepen">See the Pen <a href="https://codepen.io/gammons/pen/zoePBb/">Parallel execution with Promise.all, with exception</a> by Grant Ammons (<a href="http://codepen.io/gammons">@gammons</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+
 # Conclusion
 
 By now, you should be a freaking *ninja* at promises.  They are not too hard after the initial learning curve.  
 
 Remember, promises are great for the following reasons:
 
-1.  Your asynchronous code can be easier to read and maintain
-2.  You'll no longer need to reinvent this pattern on your own
-3.  You'll easily be able to grok other libraries who uses promises heavily or exclusively (like the `fetch` method, which I will cover next!)
+1. Your asynchronous code can be easier to read and maintain
+2. You'll no longer need to reinvent this pattern on your own
+3. You'll easily be able to grok other libraries who uses promises heavily or exclusively (like the `fetch` method, which I will cover next!)
 
 So go forth with your newfound and start making (and potentially breaking) your promises!
