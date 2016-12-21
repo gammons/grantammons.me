@@ -1,5 +1,5 @@
 ---
-title: "The Promised Land: Javascript Promises Made Easy"
+title: "Learn promises the fun way -  through ridiculous examples"
 date: 2016-12-16 12:21 UTC
 tags:
   - Javascript
@@ -9,7 +9,7 @@ comments: true
 
 _**Note**_: *while reading this article, you should listen to [Promises, Promises by Naked eyes.](https://www.youtube.com/watch?v=WBupia9oidU)*
 
-Promises hold the **promise** (yup) that they will make your asynchronous code easier to work with.  They will help you avoid *callback hell* in a lot of situations, where you'd otherwise need to deeply nest code.  
+Promises hold the **promise** (yup) that they will make your asynchronous code easier to work with.  They will help you avoid *callback hell* in a lot of situations, where you'd otherwise need to deeply nest code.
 
 Promises are now native to all modern browsers, and the pattern is ubiquitous in the Javascript community.  So if you haven't taken the time to learn it yet, settle in and learn you Promises for great justice.
 
@@ -120,11 +120,11 @@ for(let x = 0; x < 10; x++) {
     return getRandoNumButNotTooHigh() // returns a promise already so no wrapping
   }).then(num => {
     return num * -1 // returns a number so will be wrapped in a promise
-  }).then(num => {    
+  }).then(num => {
     log(num) // returns null so will be wrapped in a promise
   }).catch(err => {
     log(err)
-  })  
+  })
 }
 ```
 
@@ -134,7 +134,7 @@ This has the potential to flatten out a lot of deeply nested asynchronous calls.
 
 Using promises, aysnchronous calls can be sequenced easily.  Since `then` is run *after* an asynchronous function is done, chaining `then` calls ensures that the asynchronous calls are sequentially run.
 
-Since it's (currently) 'tis the season, we'll be lighting some balls to celebrate. So I present to you: **BALL LIGHTER.**  
+Since it's (currently) 'tis the season, we'll be lighting some balls to celebrate. So I present to you: **BALL LIGHTER.**
 
 ### Sequential ball lighting (the non-promise way)
 
@@ -287,14 +287,14 @@ We're doing a lot of very similar looking, duplicative code in `lightBallsInPara
 <p data-height="550" data-theme-id="0" data-slug-hash="yVZPOq" data-default-tab="js,result" data-user="gammons" data-embed-version="2" data-pen-title="Parallel execution with Promise.all" class="codepen">See the Pen <a href="https://codepen.io/gammons/pen/yVZPOq/">Parallel execution with Promise.all</a> by Grant Ammons (<a href="http://codepen.io/gammons">@gammons</a>) on <a href="http://codepen.io">CodePen</a>.</p>
 <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 
-Now, let's introduce an exception call.  Notice that even though the 3rd `lightBall` had an error, the fourth call still ran.  
+Now, let's introduce an exception call.  Notice that even though the 3rd `lightBall` had an error, the fourth call still ran.
 
 <p data-height="550" data-theme-id="0" data-slug-hash="zoePBb" data-default-tab="js,result" data-user="gammons" data-embed-version="2" data-pen-title="Parallel execution with Promise.all, with exception" class="codepen">See the Pen <a href="https://codepen.io/gammons/pen/zoePBb/">Parallel execution with Promise.all, with exception</a> by Grant Ammons (<a href="http://codepen.io/gammons">@gammons</a>) on <a href="http://codepen.io">CodePen</a>.</p>
 <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 
 # Conclusion
 
-By now, you should be a freaking *ninja* at promises.  They are not too hard after the initial learning curve.  
+By now, you should be a freaking *ninja* at promises.  They are not too hard after the initial learning curve.
 
 Remember, promises are great for the following reasons:
 
