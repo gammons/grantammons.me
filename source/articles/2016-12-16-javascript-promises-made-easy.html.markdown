@@ -218,15 +218,11 @@ When the `resolve()` function runs, the caller of the promise will run `then()`.
 And now, with the promises in place, we can run our ball lighting sequence *without* the pyramid of doom!
 
 ```javascript
-lightBall('one').then(() => {
-  return lightBall('two')
-}).then(() => {
-  return lightBall('three')
-}).then(() => {
-  return lightBall('four')
-}).catch(err => {
-  console.log("error was ", err)
-})
+lightBall('one')
+  .then(() => lightBall('two'))
+  .then(() => lightBall('three'))
+  .then(() => lightBall('four'))
+  .catch(err => console.log("error was ", err))
 ```
 
 Take a look at the final promise-ified solution:
@@ -242,15 +238,11 @@ Take this code for instance:
 
 ```javascript
 const lightBallsSequentially = () => {
-  lightBall('one').then(() => {
-    return lightBall('two')
-  }).then(() => {
-    return lightBall('nope') // This will throw an error!!
-  }).then(() => {
-    return lightBall('four')
-  }).catch(err => {
-    console.log("error was ", err)
-  })
+  lightBall('one')
+  .then(() => lightBall('two'))
+  .then(() => lightBall('nope')) // This will throw an error!!
+  .then(() => lightBall('four'))
+  .catch(err => console.log("error was ", err))
 }
 ```
 
