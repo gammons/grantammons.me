@@ -114,17 +114,12 @@ Check it out:
 
 ```javascript
 for(let x = 0; x < 10; x++) {
-  getRandoNumButNotTooHigh().then(num => {
-    return num  // returns a number so it will be wrapped in a promise
-  }).then(num => {
-    return getRandoNumButNotTooHigh() // returns a promise already so no wrapping
-  }).then(num => {
-    return num * -1 // returns a number so will be wrapped in a promise
-  }).then(num => {
-    log(num) // returns null so will be wrapped in a promise
-  }).catch(err => {
-    log(err)
-  })
+  getRandoNumButNotTooHigh()
+    .then(num => num)  // returns a number so it will be wrapped in a promise
+    .then(num => getRandoNumButNotTooHigh()) // returns a promise already so no wrapping
+    .then(num => num * -1) // returns a number so will be wrapped in a promise
+    .then(num => log(num)) // returns undefined so will be wrapped in a promise
+  }).catch(err => log(err))
 }
 ```
 
