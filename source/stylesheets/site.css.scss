@@ -163,3 +163,12 @@ h1.title {
   padding-left: 0;
   padding-right: 0;
 }
+
+.share-article a:hover {
+  text-decoration: none
+}
+
+.share-article i {
+  color: #999;
+  margin: 0 10px 0 10px;
+}
