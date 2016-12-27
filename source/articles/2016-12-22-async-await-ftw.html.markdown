@@ -1,5 +1,5 @@
 ---
-title: "async/await:  The asynchronous code detangler"
+title: "async/await:  The asynchronous code de-tangler"
 date: 2016-12-22 19:51 UTC
 tags: javascript
 comments: true
