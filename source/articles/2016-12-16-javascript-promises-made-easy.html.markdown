@@ -1,5 +1,5 @@
 ---
-title: "Learn promises via ridiculous examples"
+title: "Learn Promises via Wild n' Crazy Examples"
 date: 2016-12-16 12:21 UTC
 tags:
   - Javascript
