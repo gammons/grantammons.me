@@ -30,7 +30,6 @@
             <%= yield %>
 
             <% if current_page.data.comments %>
-              <%= partial :new_mailing_list %>
               <%= partial :share_article %>
               <%= partial :disqus %>
             <% end %>
