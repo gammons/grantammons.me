@@ -92,6 +92,8 @@ I am a frequenter of the [/r/unixporn](https://www.reddit.com/r/unixporn/) subre
 
 Alongside /r/unixporn, [Luke Smith](http://lukesmith.xyz/) has a great (albeit extremely meme-heavy)[Youtube channel](https://www.youtube.com/LukeSmithxyz) walking through the benefits of using a tiling window manager.  He also [shares his dotfiles](https://github.com/LukeSmithxyz/voidrice) and focuses on teaching others on how to craft a desktop experience like his.
 
+<script async id="_ck_304426" src="https://forms.convertkit.com/304426?v=6"></script>
+
 ## Summary
 
 Good dotfile hygiene is important for having a nice, repeatable, enjoyable computing experience.  It allows you to stay organized, easily port your setup to other machines, and to have confidence to experiment without messing things up.
@@ -99,3 +101,4 @@ Good dotfile hygiene is important for having a nice, repeatable, enjoyable compu
 If you're striving for a fantastic Linux desktop experience, dotfile management becomes essential, because that's how you'll be tweaking and refining your entire desktop experience.
 
 I hope after reading this, you're excited to experiment, curate, and move your dotfiles to the next level!
+
