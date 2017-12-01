@@ -80,7 +80,7 @@ The benefits of using a set of base dotfiles is that someone has already culled 
 
 ## Dotfiles and the Perfect Linux Desktop™
 
-Dotfile management becomes even more important if you're crafting together a linux desktop experience.  I am personally running [i3wm](https://i3wm.org/).  All of i3's config is in a single file, stored in `~/.config/i3/config`.  Many users of i3 also use a nice bar called [Polybar](https://github.com/jaagr/polybar) which stores its config in `~/.config/polybar/config`. (See the pattern yet).  There's also keyboard/mouse settings, dunst (a minimal notification manager), and others!  Basically, your whole desktop configuration comes under the umbrella of dotfiles.  Therefore, managing your dotfiles effectively becomes crucial to having a good experience.
+Dotfile management becomes even more important if you're crafting together a linux desktop experience.  I am personally running [i3wm](https://i3wm.org/).  All of i3's config is in a single file, stored in `~/.config/i3/config`.  Many users of i3 also use a nice bar called [Polybar](https://github.com/jaagr/polybar) which stores its config in `~/.config/polybar/config`. (See the pattern yet?).  There's also keyboard/mouse settings, dunst (a minimal notification manager), and others!  Basically, your whole desktop configuration comes under the umbrella of dotfiles.  Therefore, managing your dotfiles effectively becomes crucial to having a good experience.
 
 I am running i3 on a laptop and a desktop machine, and each have slightly different configs.  For [my own dotfiles](https://github.com/gammons/dotfiles-local), I keep 2 different branches for each config (`master` and `laptop` in this case).
 
