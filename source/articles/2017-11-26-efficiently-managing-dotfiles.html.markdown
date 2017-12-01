@@ -6,6 +6,8 @@ tags: linux-desktop
 
 ---
 
+Dotfiles and dotfile management are a foundational keystone to an organized, repeatable workflow.  They are a must if you're a developer, and also become critically important to properly manage if you're planning on running Linux as your primary desktop experience.
+
 ## What are dotfiles?
 
 Dotfiles are plain-text configuration files for various programs that you use.  These files typically reside in the root of your home directory (e.g. `/home/grant`) and are prefixed with a dot (e.g. `/home/grant/.vimrc`).  Dotfiles are becoming a more general term for any type of configuration file needed for your setup.
@@ -75,9 +77,25 @@ When using Thoughtbot's dotfiles, your own personal configs would go into `~/dot
 
 The benefits of using a set of base dotfiles is that someone has already culled together best practices.  A drawback, however, is the cognitive load associated with actually *learning* what is in them, how they work, what shortcuts they provide.  If you're declaring dotfile bankruptcy (which I have, twice), or are just starting out, it's worth considering base dotfiles that are sensible.  I like Thoughtbot, and I consider their dotfiles sensible, which is why I chose them as a good base.
 
-## Learning from others
+## Dotfiles and the Perfect Linux Desktop™
 
+Dotfile management becomes even more important if you're crafting together a linux desktop experience.  I am personally running [i3wm](https://i3wm.org/).  All of i3's config is in a single file, stored in `~/.config/i3/config`.  Many users of i3 also use a nice bar called [Polybar](https://github.com/jaagr/polybar) which stores its config in `~/.config/polybar/config`. (See the pattern yet).  There's also keyboard/mouse settings, dunst (a minimal notification manager), and others!  Basically, your whole desktop configuration comes under the umbrella of dotfiles.  Therefore, managing your dotfiles effectively becomes crucial to having a good experience.
 
+I am running i3 on a laptop and a desktop machine, and each have slightly different configs.  For [my own dotfiles](https://github.com/gammons/dotfiles-local), I keep 2 different branches for each config (`master` and `laptop` in this case).
 
+I am a frequenter of the [/r/unixporn](https://www.reddit.com/r/unixporn/) subreddit (safe for work despite name) where you can get inspired and see fantastic looking desktops.  Most of the content submitters also share their dotfiles so you can replicate their setups!
 
+<div class="caption">
+  <img src="https://i.imgur.com/kRxuRrf.png" />
+  Some folks get quite creative with their desktop setups, and they are always happy to <a href="https://www.reddit.com/r/unixporn/comments/7f6uh2/xfwm_my_kind_of_pornography/dq9tmcl/">share their dots!</a>
+</div>
 
+Alongside /r/unixporn, [Luke Smith](http://lukesmith.xyz/) has a great (albeit extremely meme-heavy)[Youtube channel](https://www.youtube.com/LukeSmithxyz) walking through the benefits of using a tiling window manager.  He also [shares his dotfiles](https://github.com/LukeSmithxyz/voidrice) and focuses on teaching others on how to craft a desktop experience like his.
+
+## Summary
+
+Good dotfile hygiene is important for having a nice, repeatable, enjoyable computing experience.  It allows you to stay organized, easily port your setup to other machines, and to have confidence to experiment without messing things up.
+
+If you're striving for a fantastic Linux desktop experience, dotfile management becomes essential, because that's how you'll be tweaking and refining your entire desktop experience.
+
+I hope after reading this, you're excited to experiment, curate, and move your dotfiles to the next level!
