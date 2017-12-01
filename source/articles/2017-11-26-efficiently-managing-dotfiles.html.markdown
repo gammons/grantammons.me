@@ -3,6 +3,7 @@
 title: How to efficiently manage your dotfiles
 date: 2017-11-26 22:22 UTC
 tags: linux-desktop
+comments: true
 
 ---
 
