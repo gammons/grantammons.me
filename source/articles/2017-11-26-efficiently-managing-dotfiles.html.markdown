@@ -49,22 +49,13 @@ Additionally, any directories in your `dotfiles` repo should be installed with d
 
 ## Secret management
 
-"But how do I keep mah secretz secret?" Great question!  Once you start really getting into storing, managing, and curating your dotfiles, it's inevitable that you'll need to store some sort of secret information there.  In this case, we can lift a concept from Heroku's [12-factor app](https://12factor.net/) concept, and store sensitive info in [environment variables](https://12factor.net/config).
+Originally, I was recommending a solution based on keeping secrets stored in a `~/.secrets` file with the secrets stored as environment variables.  This emulates Heroku's [12-factor approach](https://12factor.net).  However, after talking with colleagues, this approach is not ideal for a desktop environment, and here's why:
 
-I create a `~/.secrets` file, which exports keys and other secret info as environment variables.
+1. You now have a plaintext file on your hard drive that is storing sensitive information.  There are tools for handling sensitive info, so use them!
+2. Crash reports that get shipped off usually include environment variables.  You don't have control over where your secrets go.
+3. On a desktop machine, processes can easily spawn many sub-processes, each of which now has access to sensitive environment variables.
 
-```bash
-export AWS_ACCESS_KEY=ABCD1234
-export AWS_SECRET_ACCESS_KEY=ABCD1234ABCD1234
-```
-
-Then, at the bottom of my `~/.zshrc` file, I have the line:
-
-```
-source ~/.secrets
-```
-
-This will load my environment variables into my session, which I can then reference in other files.  The secrets are secure, and you don't need to worry about checking in sensitive info to your repo!
+A good alternative is to Use a password store like `pass` or `lpass` and store sensitive info as a note.  You can write a quick script to decrypt and use in an environment variable as needed.  It explicitly limits the scope of how far sensitive information can travel, and it keeps this info behind your passphrase.
 
 ## Using a curated set of base dotfiles
 
