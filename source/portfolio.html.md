@@ -4,7 +4,18 @@ header: Portfolio
 page: portfolio
 ---
 
-## Work: PipelineDeals
+## Work
+
+### Director of Engineering at ConvertKit - Jan 2017 to present
+
+[ConvertKit][ck] is an email marketing platform that focuses on creators.  
+
+* Scaled engineering org from 3 to 18+ engineers (we're still hiring).  ConvertKit has [solid growth](https://convertkit.baremetrics.com/).  I joined when we were at around $6M in ARR, and I helped scale it to $14+M.
+* Implemented many processes that were nascent or missing - hiring, software delivery, QA, reviews / promotions, etc.
+* Scaled the team to squads, with squad leads
+* Migrated production infrastructure from Heroku to AWS
+
+### PipelineDeals - VP engineering - 2006 to late 2016
 
 * Built [PipelineDeals][pld] with cofounders from idea to successful bootstrapped SaaS app generating millions in revenue.  Is employee #1.
 * Hired and Manages 3 remote teams of awesome software engineers.
@@ -12,14 +23,22 @@ page: portfolio
 * [Crafted + continually hones][scrum] software delivery process to ensure high quality and tight collaboration.  Strives to keep process minimal.
 * Manages a large production infrastructure in AWS, overseeing 50+ instances.  Implemented best-in-class practices to ensure speed, scalability, and uptime.   Achieved 99.999% uptime in 2015.  Has kept infrastructure costs well below [SaaS averages][saas] by strategic use + planning of reserved instances.
 
-## Open source: Todolist
+## Products
+
+### Ultradeck
+
+* Built my own SaaS, called [Ultradeck](https://ultradeck.co).  It did not get traction, but I learned a ton about product development.
+
+## Open source stuff
+
+### Todolist
 
 [Todolist][todolist] is an open source command-line task management app written in Go.
 
 * Can be installed using Homebrew via `brew install todolist`.
-* There is a [web view](http://demo.todolist.site) which is a single-page app that displays your todolist in a browser.  The web view is a single-page app (SPA ) coded with React/Redux, ES6.
+* There is a [web view](http://demo.todolist.site) which is a single-page app that displays your todolist in a browser.  The web view is a single-page app (SPA) coded with React/Redux, ES6.
 
-## Open source:  fake_arel
+### fake_arel
 
 [fake_arel][fa] is a gem I wrote in 2010 that allowed developers to use Rails 3 query syntax in Rails 2.  It accomplished this by clever use of named scopes.
 
@@ -27,6 +46,7 @@ page: portfolio
 * Worked as advertised, as we were able to drop out fake_arel and begin using Rails 3 arel seamlessly.
 * fake_arel was featured on the [Ruby5 podcast][r5] in 2010.
 
+[ck]: https://convertkit.com
 [pld]: https://www.pipelinedeals.com
 [todolist]: http://todolist.site
 [saas]: http://www.forentrepreneurs.com/2015-saas-survey-part-2
