@@ -4,4 +4,12 @@ task :publish do
   system "cd ../gammons.github.io && git add * && git commit -a -m 'new build' && git push"
 end
 
+task :run do
+  system "docker-compose up"
+end
+
+task :new do
+  system "docker-compose run middleman middleman article #{ARGV.last}"
+end
+
 task :default => :publish

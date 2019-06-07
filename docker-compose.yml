@@ -1,0 +1,9 @@
+version: '3'
+services:
+  middleman:
+    image: grantammons.me
+    volumes:
+      - .:/myapp
+    ports:
+      - "4567:4567"
+      - "35729:35729"
