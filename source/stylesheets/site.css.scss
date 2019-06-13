@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto:100,400');
+@import url('https://fonts.googleapis.com/css?family=Domine|Roboto:300,400,700&display=swap');
 @charset "utf-8";
 
 $text-color: rgb(58,65,69);
@@ -28,6 +28,7 @@ pre {
 }
 
 .page > h1, .page > h2, .page > h3 {
+  font-family: "Domine";
   margin-top: 40px;
   margin-bottom: 0;
 }
@@ -52,9 +53,6 @@ pre {
   margin-top: 15px;
   margin-bottom: 15px;
 }
-
-
-
 
 em {
   font-style: italic;
@@ -125,6 +123,7 @@ ul {
 }
 
 h1.title {
+  font-family: "Domine";
   text-align: center;
 }
 
