@@ -21,9 +21,7 @@ page: portfolio
 
 I'm extremely proud of what I've accomplished to date at ConvertKit.  I joined as Director of Engineering when the company had 3 engineers.  We were onto something - the company was bootstrapped by Nathan, our CEO, and we manged to get enough growth to see about $5M in ARR and a few thousand paying customers.
 
-However, there was an enormous mountain of technical challenges.  The app seemed like it was down more than it was up.  In fact, the app was down the night before my first day(!), and I helped triage.
-
-When I joined, ConvertKit had never seen true technical leadership.  In the beginning, Nathan relied on a handful of contractors and friends to build out ConvertKit, and then hired a couple of those friends as full-time employees.  So, I had my work cut out for me.
+However, there was an enormous mountain of technical challenges.  The app was down frequently, and sending delays were frequent.  
 
 The first step was to right the ship from a software delivery standpoint.  Before I arrived, there was little rigor around code review, testing, or QA.   So for the first few months I acted as a technical leader and personally reviewed every PR.  I established learning goals for engineers who needed to level up. 
 
