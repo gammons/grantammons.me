@@ -4,6 +4,8 @@ header: Portfolio
 page: portfolio
 ---
 
+[Download my resume][https://github.com/gammons/resume/blob/master/resume.pdf]
+
 # Work
 
 ## Director of Engineering at ConvertKit - Jan 2017 to present
@@ -21,7 +23,7 @@ page: portfolio
 
 I'm extremely proud of what I've accomplished to date at ConvertKit.  I joined as Director of Engineering when the company had 3 engineers.  We were onto something - the company was bootstrapped by Nathan, our CEO, and we manged to get enough growth to see about $5M in ARR and a few thousand paying customers.
 
-However, there was an enormous mountain of technical challenges.  The app was down frequently, and sending delays were frequent.  
+However, there was an enormous mountain of technical challenges.  The app was down frequently, and email sending delays were common.
 
 The first step was to right the ship from a software delivery standpoint.  Before I arrived, there was little rigor around code review, testing, or QA.   So for the first few months I acted as a technical leader and personally reviewed every PR.  I established learning goals for engineers who needed to level up. 
 
