@@ -107,10 +107,19 @@ The [retriever Rakefile][retriever_rakefile] also has functions to backfill all 
 
 The main task, `refresh_and_upload` runs hourly.  Currently it's running as a [Kubernetes CronJob][cronjob] on my homelab Kube cluster (I'll talk more about that in another post).
 
+**Netlify Lambda functions**
+
+12inch.reviews is hosted on [Netlify][netlify], mainly because Netlify is amazing.  It provides a seamless CI/CD pipeline, SSL, and [AWS Lambda-like functions][functions] - all for free.
+
+I use these functions to "log in" a user via Spotify Oauth.  I would have done this all on the frontend, except for the fact that Oauth requires a secret token and that can't be exposed on the frontend.  
+
+Since Spotify's access tokens are short-lived (1 hour max!) there is also a secondary function that will renew an access token seamlessly upon playback.
+
+Once an access token is obtained, state is stored via the browser's `LocalStorage` API.
+
 ### The frontend
 
 The frontend of 12inch.reviews is a relatively simple `create-react-app` single-page app, that provides search and sort functionality, as well as the ability to play any album using Spotify's [web playback SDK][sdk].
-
 
 **Getting all the album data**
 
@@ -126,7 +135,42 @@ Although IndexedDB is great for *storing* this data, there is currently no funct
 
 **Playing albums**
 
+I utilized Spotify's [Web playback SDK][sdk] to do the actual playing.  It provides a series of hooks to use in order to initialize the player, and to do the actual playing.
 
+I wrapped the actual playing into a [simple class][player] that ensures a refreshed access token is always provided.
+
+The [player component][player_component] is one of the most complex react components in the app.  Although the web playback SDK has its own state, I had to essentially "sync up" the player component's state with the SDK's state.  As with any type of synchronization, there are *probably* bugs keeping these 2 things in sync with each other.
+
+The [progress bar][progress_bar] is clickable and utilizes some simple CSS animations to look and feel like a regular music progress bar.  
+
+IANA designer, but I was heavily influenced by Tesla's UX when designing the player component.
+
+**Criticism of Spotify's Web Playback SDK**
+
+My experience with Spotify's web playback SDK has been sub-par.  The SDK does not have a `package.json` file, and therefore is not in the npm universe.  There isn't an easy way to hook the SDK into a React or Vue app.  This required a lot of [manual syncing][syncing] code that is probably hiding bugs.
+
+They have a [public issue tracker][tracker] on Github, but many of the issues don't have answered questions.
+
+It's hard for me to understand who the target audience was for this SDK.  I think it would benefit greatly from being open source and part of the NPM ecosystem.  This would allow others to create wrappers for popular frameworks, which would allow me to remove my terrible syncing code.
+
+### Lessons learned + planned optimizations
+
+This was a really fun project to work on.  It took me about 6 weeks of coding, utilizing my "side project hours" (roughly 5:30am - 7am on weekdays).
+
+I learned a bunch of things:
+
+* Tailwind.css
+* IndexedDB
+*
+
+**Shortcomings and optimizations**
+
+12inch.reviews is a toy.  It has *enormous* shortcomings, mainly the fact that it needs to backfill nearly 20Mb of album review data in order to work well.  This is insanely inefficient and wouldn't be appropriate for anything other than a toy, side project site coded for educational purposes.
+
+
+    * could lean into flow typing more.
+    * overall performance is still not great
+    * utilize a service worker to populate the indexeddb
 
 
 
@@ -148,3 +192,9 @@ Although IndexedDB is great for *storing* this data, there is currently no funct
 [retriever_rakefile]: https://github.com/gammons/12inch.reviews/blob/master/retriever/Rakefile
 [cronjob]: https://kubernetes.io/docs/concepts/workloads/controllers/cron-jobs/
 [albumstore]: https://github.com/gammons/12inch.reviews/blob/master/src/app.js#L53
+[netlify]: https://netlify.com
+[functions]: https://www.netlify.com/products/functions/
+[player]: https://github.com/gammons/12inch.reviews/blob/master/src/models/spotifyPlayer.js
+[tracker]: https://github.com/spotify/web-playback-sdk
+[player_component]: https://github.com/gammons/12inch.reviews/blob/master/src/components/player.js
+[syncing]: https://github.com/gammons/12inch.reviews/blob/master/src/components/player.js#L52-L58
