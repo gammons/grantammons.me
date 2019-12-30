@@ -4,7 +4,7 @@ header: Portfolio
 page: portfolio
 ---
 
-[Download my resume][https://github.com/gammons/resume/blob/master/resume.pdf]
+[Download my resume](https://github.com/gammons/resume/blob/master/resume.pdf)
 
 # Work
 
