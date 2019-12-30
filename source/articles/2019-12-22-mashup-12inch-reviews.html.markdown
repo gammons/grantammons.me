@@ -6,46 +6,6 @@ tags: sideproject
 
 ---
 
-* Intro
-  * I like music
-  * I like pitchify.com
-  * I like historical reviews
-  * I wanted to create a simple site to mash together pitchfork's reviews with spotify's web playback SDK
-* how it works
-  * it's searchable collection of pitchfork's 20k+ album reviews
-  * it all works via the frontend with a few key browser technologies to make it happen
-  * backend
-    * retriever
-      * runs as a cron task on a server to process album data from Pitchfork
-      * utilizes Pitchfork's [undocumented API][pitchfork_api] to get album reviews
-      * has a small sqlite DB to keep track of its internal state and to know which albums are new
-      * steps:
-        * retrieve new albums from Pitchfork,
-        * utilize Spotify's [search api][1] to attempt to find the associated album id and artist idj
-        * store the new albums in retriever's sqlite DB
-      * separate task:
-        * create JSON files out of the sqlite DB.  these files are what will be served to the 12inch.reviews frontend.
-        * uses an `initial.json` which gets served at page load time to populate initial album results onto the page
-
-  * frontend
-    * it's a `create-react-app` app
-    * it utilizes modern browser's `indexedDB` to store all albums, loaded once with the JSON files payload
-    * it does keep a copy of all albums loaded in memory, for searching and sorting
-      * uses plain old javascript to do the searching
-    * utilizes `storybook.js` to get the initial components styled and working correctly
-    * Utilizes `tailwind.css`.
-    * the initial album population occurs after the page is fully loaded, via `fetch` calls that retrieve 17 or so JSON files that represent each album
-    * it's optimized to be a progressive web app and works well on phones
-      * can be installed as a PWA on android devices
-      * albums will play in the background, even while phone is locked
-
-  * optimizations
-    * could lean into flow typing more.
-    * overall performance is still not great
-    * utilize a service worker to populate the indexeddb
-
----
-
 ![](12inch.reviews.png)
 
 There are a couple things to know about me:
@@ -145,7 +105,7 @@ The [progress bar][progress_bar] is clickable and utilizes some simple CSS anima
 
 IANA designer, but I was heavily influenced by Tesla's UX when designing the player component.
 
-**Criticism of Spotify's Web Playback SDK**
+### Criticism of Spotify's Web Playback SDK
 
 My experience with Spotify's web playback SDK has been sub-par.  The SDK does not have a `package.json` file, and therefore is not in the npm universe.  There isn't an easy way to hook the SDK into a React or Vue app.  This required a lot of [manual syncing][syncing] code that is probably hiding bugs.
 
@@ -155,29 +115,25 @@ It's hard for me to understand who the target audience was for this SDK.  I thin
 
 ### Lessons learned + planned optimizations
 
-This was a really fun project to work on.  It took me about 6 weeks of coding, utilizing my "side project hours" (roughly 5:30am - 7am on weekdays).
+This was a really fun project to work on.  It took me about 6 weeks of coding, utilizing my "[side project][side] hours" (roughly 5:30am - 7am on weekdays).
 
 I learned a bunch of things:
 
 * Tailwind.css
 * IndexedDB
-*
+* Netlify Lambda Functions
+* Spotify's APIs
 
-**Shortcomings and optimizations**
+12inch.reviews is a toy.  It has *enormous* shortcomings, mainly the fact that it needs to backfill nearly 20Mb of album review data in order to work well.  This is insanely inefficient and wouldn't be appropriate for anything other than a personal side project site coded for educational purposes.
 
-12inch.reviews is a toy.  It has *enormous* shortcomings, mainly the fact that it needs to backfill nearly 20Mb of album review data in order to work well.  This is insanely inefficient and wouldn't be appropriate for anything other than a toy, side project site coded for educational purposes.
-
-
-    * could lean into flow typing more.
-    * overall performance is still not great
-    * utilize a service worker to populate the indexeddb
-
-
+Other shortcomings:
+* I don't feel like I leaned into Flow types as much as I could.
+* Overall performance is still not great, as measured by Chromes Dev Tools.
+* I should utilize a service worker to populate the indexeddb.
+* Could create a GraphQL backend to do the data serving, to alleviate the need to bring all 20MB of data to the frontend.
 
 
-
-
-
+[12inch]: https://12inch.reviews
 [spotify_search]: https://developer.spotify.com/documentation/web-api/reference/search/search/
 [pitchfork_api]: https://pitchfork.com/api/v2/search/?types=reviews
 [pf]: https://pitchfork.com
@@ -198,3 +154,4 @@ I learned a bunch of things:
 [tracker]: https://github.com/spotify/web-playback-sdk
 [player_component]: https://github.com/gammons/12inch.reviews/blob/master/src/components/player.js
 [syncing]: https://github.com/gammons/12inch.reviews/blob/master/src/components/player.js#L52-L58
+[side]: https://grant.dev/2016/07/22/the-life-changing-benefits-of-side-projects/
